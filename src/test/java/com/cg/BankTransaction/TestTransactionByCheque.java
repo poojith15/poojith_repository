@@ -20,7 +20,7 @@ public class TestTransactionByCheque {
 	public void Test1() {
 		
 	}
-	
+	//
 	@DisplayName("Validaton for the transaction type")
 	@Test
 	public void Test2() throws TransactionTypeException{
