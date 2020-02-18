@@ -2,7 +2,11 @@ package com.cg.BankTransaction.entity;
 
 import java.time.LocalDate;
 
-
+/**
+ * 
+ * @author poojith
+ *This class is an entity class which contains cheque details.
+ */
 public class Cheque {
 	private String chequeId;
 	private String chequeNum;

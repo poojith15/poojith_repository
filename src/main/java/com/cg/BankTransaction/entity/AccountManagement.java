@@ -4,7 +4,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 
+ * @author poojith
+ * This is an entity class which contains account details, transactions and customer object.
+ */
 public class AccountManagement {
      private String accountId;
      private Customer accountHolder=new Customer();
@@ -15,9 +19,7 @@ public class AccountManagement {
      private double accountInterest;
      private LocalDate lastUpdated;
      private List<AccTransaction> trxns=new ArrayList();
-     /**
-      * 
-      */
+    
 	public AccountManagement() {
 		
 	}

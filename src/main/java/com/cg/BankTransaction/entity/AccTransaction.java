@@ -2,7 +2,11 @@ package com.cg.BankTransaction.entity;
 
 import java.time.LocalDate;
 
-
+/**
+ * 
+ * @author poojith
+ *This is an entity class which contains transaction details.
+ */
 public class AccTransaction implements Comparable<AccTransaction>{
 	private String transAccountId;
 	private String transType;

@@ -2,7 +2,11 @@ package com.cg.BankTransaction.entity;
 
 import java.time.LocalDate;
 
-
+/**
+ * 
+ * @author poojith
+ *This is an entity class which contains customer deatils and address object.
+ */
 public class Customer {
      private String customerId;
      private String customerName;

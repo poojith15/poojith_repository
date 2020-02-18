@@ -1,5 +1,10 @@
 package com.cg.BankTransaction.entity;
 
+/**
+ * 
+ * @author poojith
+ *This is an entity class which contains customer address details.
+ */
 public class Address {
 	private String addressId;
 	private String addressLine1;

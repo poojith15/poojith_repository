@@ -1,5 +1,9 @@
 package com.cg.BankTransaction.entity;
-
+/**
+ * 
+ * @author poojith
+ *This is an entity class which contains branch details.
+ */
 public class Branch {
 	private String branchId;
 	private String branchName;

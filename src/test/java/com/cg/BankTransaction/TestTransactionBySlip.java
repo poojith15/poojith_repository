@@ -37,13 +37,13 @@ public class TestTransactionBySlip {
 		assertThrows(AmountException.class,()->ser.doTransaction("100000989565","Debit", 495058382.0));
 	}
 	
-	@DisplayName("Funtionality for debiting the amount")
+	@DisplayName("Funtionality for debiting the amount by slip")
 	@Test
 	public void Test4() throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException {
 		assertTrue(ser.doTransaction("100000989565","Debit", 50.0));	
 	}
 	
-	@DisplayName("Funtionality for crediting the amount")
+	@DisplayName("Funtionality for crediting the amount by slip")
 	@Test
 	public void Test5() throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException {
 		assertTrue(ser.doTransaction("100000989565","Credit", 50.0));
