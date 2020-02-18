@@ -4,8 +4,24 @@ import com.cg.BankTransaction.entity.AccountManagement;
 import com.cg.BankTransaction.exceptions.AccountIdException;
 import com.cg.BankTransaction.repository.CgRepository;
 
-public class TransactionDaoImpl implements TransactionDao{
+/**
+ * 
+ * @author poojith
+ *This DAO class contains methods to access account and update account after the transaction.
+ */
 
+public class TransactionDaoImpl implements TransactionDao{
+    /**
+     * This method loads the account management object from the map
+     * which is in the repository. 
+     * 
+     * @param accountid
+     * 
+     * @return It returns the account management instance and throws exception if it doesn't exist.
+     * 
+     * @throws Throws exception if account doesn't exist.
+     * 
+     */
 	@Override
 	public AccountManagement getAccount(String accountid) throws AccountIdException {
 		if(!CgRepository.accList.containsKey(accountid)) 
@@ -14,6 +30,17 @@ public class TransactionDaoImpl implements TransactionDao{
 			
 		return CgRepository.accList.get(accountid);
 	}
+	
+	/**
+	 * This method updates the account details into the existing account which already exists in 
+	 * the repository.
+	 * 
+	 * @param accid
+	 * @param amount
+	 * 
+	 * @return It does not return anything.
+	 * 
+	 */
 
 	@Override
 	public  void updateAccount(String accid,double amount) {

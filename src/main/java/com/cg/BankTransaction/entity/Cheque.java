@@ -19,6 +19,13 @@ public class Cheque {
 	public Cheque() {
 		
 	}
+	
+	public Cheque(String chequeAccountNo, LocalDate chequeIssueDate) {
+		super();
+		this.chequeAccountNo = chequeAccountNo;
+		this.chequeIssueDate = chequeIssueDate;
+	}
+
 	public Cheque(String chequeId, String chequeNum, String chequeAccountNo, String chequeBankName, String chequeIFSC,
 			LocalDate chequeIssueDate, String chequeStatus) {
 		super();

@@ -12,8 +12,11 @@ import com.cg.BankTransaction.entity.Branch;
 import com.cg.BankTransaction.entity.Cheque;
 import com.cg.BankTransaction.entity.Customer;
 import com.cg.BankTransaction.entity.AccTransaction;
-
-
+/**
+ * 
+ * @author poojith
+ *This is a Repository class which contains data for all entity classes in a map.
+ */
 
 public class CgRepository {
 	public static final int ZERO=0;
@@ -65,7 +68,7 @@ public class CgRepository {
         AccTransaction tran4=new AccTransaction("100000985456","Credit",12500.0,"slip",date5,"-","Manasa Reddy","self",850065.69);
 
         /**
-        * Map of Transaction 
+        * List of transactions for each account. 
         */
         transList1.add(tran1);
         transList2.add(tran2);
@@ -73,14 +76,14 @@ public class CgRepository {
         transList4.add(tran4);
 		
 		/**----ACCOUNT MANAGER Repository--------------------------------------------------------------------------------------------------------------------------------------
-		                               AccountManagement(String   ,Customer     ,String         ,String     ,String       ,double        ,double         ,LocalDate) 
-		                               AccountManagement(accountId,accountHolder,accountBranchId,accountType,accountStatus,accountBalance,accountInterest,lastUpdated)*/ 
+		                               AccountManagement(String   ,Customer     ,String         ,String     ,String       ,double        ,double         ,LocalDate  ,List<Transaction>) 
+		                               AccountManagement(accountId,accountHolder,accountBranchId,accountType,accountStatus,accountBalance,accountInterest,lastUpdated,trxns)*/ 
 		AccountManagement account1=new AccountManagement("100000123456", cust1, "br1001", "SAVINGS", "ACTIVE", 200065.26, 0.0, date5,transList1);
 		AccountManagement account2=new AccountManagement("100000989565", cust2, "br1002", "CURRENT", "ACTIVE", 305067.86, 0.0, date5,transList2);
 		AccountManagement account3=new AccountManagement("100000248465", cust3, "br1003", "CURRENT", "ACTIVE", 500895.59, 0.0, date5,transList3);
 		AccountManagement account4=new AccountManagement("100000985456", cust4, "br1004", "SAVINGS", "ACTIVE", 850065.69, 0.0, date5,transList4);
 		/**
-		 * Map of Account Management with accountId as a key
+		 * Map of Account Management with accountId as a key.
 		 */
 		accList.put(account1.getAccountId(), account1);
 		accList.put(account2.getAccountId(), account2);
@@ -95,8 +98,9 @@ public class CgRepository {
 		Cheque cheque3=new Cheque("11003", "555515", "100000248465", "PECUNIA", "PCNA0001003", date3, "SUCCESS");
 		Cheque cheque4=new Cheque("11004", "957665", "100000985456", "PECUNIA", "PCNA0001004", date4, "SUCCESS");
 		Cheque cheque5=new Cheque("11005", "957654", "100000985456", "PECUNIA", "PCNA0001004", date5, "FAILED");
-		
-		
+		/**
+		 * Map of cheque with cheque id as key. 
+		 */
 		cheq.put(cheque1.getChequeId(), cheque1);
 		cheq.put(cheque2.getChequeId(), cheque2);
 		cheq.put(cheque3.getChequeId(), cheque3);
