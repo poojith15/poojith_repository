@@ -15,7 +15,7 @@ import com.cg.BankTransaction.service.TransactionServiceImpl;
 
 public class TestTransactionByCheque {
 	TransactionService ser=new TransactionServiceImpl();
-	
+	@DisplayName("Validaton for the transaction type")
 	@Test
 	public void Test1() {
 		
