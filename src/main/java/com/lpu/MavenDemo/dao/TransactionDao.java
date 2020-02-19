@@ -4,7 +4,6 @@ import com.lpu.MavenDemo.entity.AccountManagement;
 import com.lpu.MavenDemo.exceptions.AccountIdException;
 
 /**
- * 
  * @author pooji
  *This is an interface which holds the implementations of DAO layer.
  */

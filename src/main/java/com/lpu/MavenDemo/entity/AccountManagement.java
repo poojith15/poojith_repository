@@ -6,24 +6,24 @@ import java.util.List;
 
 /**
  * 
- * @author poojith
- * This is an entity class which contains account details, transactions and customer object.
+ * @author poojith This is an entity class which contains account details,
+ *         transactions and customer object.
  */
 public class AccountManagement {
-     private String accountId;
-     private Customer accountHolder=new Customer();
-     private String accountBranchId;
-     private String accountType;
-     private String accountStatus;
-     private double accountBalance;
-     private double accountInterest;
-     private LocalDate lastUpdated;
-     private List<AccTransaction> trxns=new ArrayList();
-    
+	private String accountId;
+	private Customer accountHolder = new Customer();
+	private String accountBranchId;
+	private String accountType;
+	private String accountStatus;
+	private double accountBalance;
+	private double accountInterest;
+	private LocalDate lastUpdated;
+	private List<AccTransaction> trxns = new ArrayList();
+
 	public AccountManagement() {
-		
+
 	}
-	
+
 	public AccountManagement(String accountId, Customer accountHolder, String accountBranchId, String accountType,
 			String accountStatus, double accountBalance, double accountInterest, LocalDate lastUpdated,
 			List<AccTransaction> trxns) {
@@ -42,64 +42,80 @@ public class AccountManagement {
 	public String getAccountId() {
 		return accountId;
 	}
+
 	public void setAccountId(String accountId) {
 		this.accountId = accountId;
 	}
+
 	public Customer getAccountHolder() {
 		return accountHolder;
 	}
+
 	public void setAccountHolder(Customer accountHolder) {
 		this.accountHolder = accountHolder;
 	}
+
 	public String getAccountBranchId() {
 		return accountBranchId;
 	}
+
 	public void setAccountBranchId(String accountBranchId) {
 		this.accountBranchId = accountBranchId;
 	}
+
 	public String getAccountType() {
 		return accountType;
 	}
+
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
+
 	public String getAccountStatus() {
 		return accountStatus;
 	}
+
 	public void setAccountStatus(String accountStatus) {
 		this.accountStatus = accountStatus;
 	}
+
 	public double getAccountBalance() {
 		return accountBalance;
 	}
+
 	public void setAccountBalance(double accountBalance) {
 		this.accountBalance = accountBalance;
 	}
+
 	public double getAccountInterest() {
 		return accountInterest;
 	}
+
 	public void setAccountInterest(double accountInterest) {
 		this.accountInterest = accountInterest;
 	}
+
 	public LocalDate getLastUpdated() {
 		return lastUpdated;
 	}
+
 	public void setLastUpdated(LocalDate lastUpdated) {
 		this.lastUpdated = lastUpdated;
 	}
-	
+
 	public List<AccTransaction> getTrxns() {
 		return trxns;
 	}
+
 	public void setTrxns(List<AccTransaction> trxns) {
 		this.trxns = trxns;
 	}
+
 	@Override
 	public String toString() {
-		
-		return "Account Id"+accountId+accountHolder+"Account Type"+accountType+"Account Status"+accountStatus
-				+"Account Interest"+accountInterest+"lastUpdated"+lastUpdated;
+
+		return "Account Id" + accountId + accountHolder + "Account Type" + accountType + "Account Status"
+				+ accountStatus + "Account Interest" + accountInterest + "lastUpdated" + lastUpdated;
 	}
-     
-     
+
 }

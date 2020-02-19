@@ -13,38 +13,46 @@ import com.lpu.MavenDemo.exceptions.TransactionTypeException;
 import com.lpu.MavenDemo.service.TransactionService;
 import com.lpu.MavenDemo.service.TransactionServiceImpl;
 
-
 public class TestTransactionBySlip {
-	TransactionService ser=new TransactionServiceImpl();
+	TransactionService ser = new TransactionServiceImpl();
+
+	@DisplayName("Validation for the account ID Format")
+	@Test
+	public void Tes1() throws AccountIdFormateException {
+		assertThrows(AccountIdFormateException.class, () -> ser.doTransaction("516526", "Debit", 50.0));
+	}
+
 	@DisplayName("Validation for the account ID")
 	@Test
-	public void Tes1() throws AccountIdFormateException{
-		assertThrows(AccountIdFormateException.class,()->ser.doTransaction("516526","Debit", 50.0));        
-    }
-	
+	public void Test6() throws AccountIdException {
+		assertThrows(AccountIdException.class, () -> ser.doTransaction("101000989565", "Debit", 50.0));
+	}
+
 	@DisplayName("Validaton for the transaction type")
 	@Test
-	public void Test2() throws TransactionTypeException{
-		assertThrows(TransactionTypeException.class,()->ser.doTransaction("100000989565","Debitt", 50.0));
+	public void Test2() throws TransactionTypeException {
+		assertThrows(TransactionTypeException.class, () -> ser.doTransaction("100000989565", "Debitt", 50.0));
 	}
-	
+
 	@DisplayName("Validaton for the amount")
 	@Test
-	public void Test3() throws AmountException{
-		assertThrows(AmountException.class,()->ser.doTransaction("100000989565","Debit", 495058382.0));
+	public void Test3() throws AmountException {
+		assertThrows(AmountException.class, () -> ser.doTransaction("100000989565", "Debit", 495058382.0));
 	}
-	
+
 	@DisplayName("Funtionality for debiting the amount by slip")
 	@Test
-	public void Test4() throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException {
-		assertTrue(ser.doTransaction("100000989565","Debit", 50.0));	
+	public void Test4()
+			throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException {
+		assertTrue(ser.doTransaction("100000989565", "Debit", 50.0));
 	}
-	
+
 	@DisplayName("Funtionality for crediting the amount by slip")
 	@Test
-	public void Test5() throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException {
-		assertTrue(ser.doTransaction("100000989565","Credit", 50.0));
-		
+	public void Test5()
+			throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException {
+		assertTrue(ser.doTransaction("100000989565", "Credit", 50.0));
+
 	}
-	
+
 }

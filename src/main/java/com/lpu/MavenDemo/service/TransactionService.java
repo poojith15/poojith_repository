@@ -11,15 +11,15 @@ import com.lpu.MavenDemo.exceptions.TransactionTypeException;
 
 /**
  * 
- * @author poojith
- *This interface class holds the implements of service class.
+ * @author poojith This interface class holds the implements of service class.
  */
 public interface TransactionService {
-       public boolean doTransaction(String accid,String txType,double amt)
-    		   throws AccountIdFormateException,AmountException,TransactionTypeException,AccountIdException;
-       public boolean doTransaction(Cheque cheque,String txType,double amt)
-    		   throws AccountIdFormateException, TransactionTypeException, AmountException, AccountIdException;
-       public int viewTransactions(String accid)
-    		   throws AccountIdFormateException, AccountIdException;
-       
+	public boolean doTransaction(String accid, String txType, double amt)
+			throws AccountIdFormateException, AmountException, TransactionTypeException, AccountIdException;
+
+	public boolean doTransaction(Cheque cheque, String txType, double amt)
+			throws AccountIdFormateException, TransactionTypeException, AmountException, AccountIdException;
+
+	public int viewTransactions(String accid) throws AccountIdFormateException, AccountIdException;
+
 }

@@ -2,15 +2,13 @@ package com.lpu.MavenDemo.exceptions;
 
 /**
  * 
- * @author pooji
- *This is an exception class for account ID.
+ * @author pooji This is an exception class for account ID.
  */
-public class AccountIdException extends Exception{
+public class AccountIdException extends Exception {
 
 	@Override
 	public String toString() {
 		return "Account ID doesnot exsist";
 	}
-	
 
 }

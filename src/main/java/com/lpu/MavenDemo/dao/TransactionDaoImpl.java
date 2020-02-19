@@ -5,12 +5,11 @@ import com.lpu.MavenDemo.exceptions.AccountIdException;
 import com.lpu.MavenDemo.repository.CgRepository;
 
 /**
- * 
  * @author poojith
  *This DAO class contains methods to access account and update account after the transaction.
  */
 
-public class TransactionDaoImpl implements TransactionDao{
+public class TransactionDaoImpl implements TransactionDao {
     /**
      * This method loads the account management object from the map
      * which is in the repository. 
